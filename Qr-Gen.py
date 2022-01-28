@@ -1,16 +1,14 @@
 from tkinter import *
 
 import pyqrcode
-
-from PIL import Image, ImageTk
-
+from pil import ImageTk
 
 
 class QR_CODE:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("QR-CODE-GENERATOR  | BY VINEY")
+        self.root.title("QR-CODE-GENERATOR  | BY Pavitar Negi")
         self.root.geometry("1000x550+200+50")  ### 200 and 50 are x and y axizs from windo
         self.root.resizable(False, False)  ###SIZE CANT BERESIZE first false is width and second is height
         self.root.config(bg="white")
@@ -91,7 +89,7 @@ class QR_CODE:
             qr_code = pyqrcode.create(qr_data)
 
 
-            qr_code.png('My_QR.png')    #import png pypi
+            qr_code.png('My_QR.png',scale=5)    #import png pypi
 
             self.im = ImageTk.PhotoImage(file='My_QR.png')
             self.txt.config(image=self.im)
