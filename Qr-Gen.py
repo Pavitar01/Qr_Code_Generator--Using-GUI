@@ -89,7 +89,9 @@ class QR_CODE:
             qr_code = pyqrcode.create(qr_data)
 
 
-            qr_code.png('My_QR.png',scale=5)    #import png pypi
+            qr_code.png('My_QR.png',scale=3.8)    #import png pypi
+
+
 
             self.im = ImageTk.PhotoImage(file='My_QR.png')
             self.txt.config(image=self.im)
